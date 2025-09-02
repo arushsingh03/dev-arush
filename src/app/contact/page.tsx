@@ -14,7 +14,6 @@ import {
   AlertCircle,
   Pickaxe,
 } from "lucide-react";
-import Image from "next/image";
 import Nav from "../components/Nav";
 
 const CONTACT = {
@@ -62,7 +61,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 max-w-2xl text-white/70 text-lg relative z-30"
           >
-            Want to work together or have a question? Drop a message I'll get
+            Want to work together or have a question? Drop a message I&apos;ll get
             back fast.
           </motion.p>
         </div>

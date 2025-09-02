@@ -11,6 +11,7 @@ import {
   MetaIconOutline,
   OpenAILogo,
 } from "../components/AnimatedCard";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -22,7 +23,7 @@ export default function AboutPage() {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-22">
             <div className="flex justify-center lg:justify-end w-full lg:order-2">
               <div className="bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 w-48 h-56 sm:w-56 sm:h-64 md:w-72 md:h-80 lg:w-96 lg:h-104 xl:w-120 xl:h-130 flex items-center justify-center shadow-lg">
-                <img
+                <Image
                   src="/avatar.png"
                   alt="Arush Avatar"
                   className="w-42 h-50 sm:w-50 sm:h-58 md:w-64 md:h-72 lg:w-88 lg:h-96 xl:w-120 xl:h-120 object-contain"
@@ -60,7 +61,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center lg:text-right w-full lg:pt-4 xl:pt-8 2xl:pt-16">
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-lg mx-auto lg:mx-0 lg:ml-auto">
-                I'm Arush, a developer and designer who loves speed and
+                I&apos;m Arush, a developer and designer who loves speed and
                 creativity in every form from riding bikes and watching F1 to
                 gaming. I enjoy building UIs and coding projects that feel just
                 as smooth and exciting as the experiences I enjoy outside of
@@ -76,7 +77,7 @@ export default function AboutPage() {
                   Who I am
                 </h3>
                 <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                  I'm Arush, a full-stack developer who loves building things on
+                  I&apos;m Arush, a full-stack developer who loves building things on
                   the internet. I focus on creating digital experiences that are
                   not only functional but also a joy to use. My passion lies in
                   building web and mobile apps and experimenting with AI to make
@@ -93,7 +94,7 @@ export default function AboutPage() {
                   design meets logic. I have a soft spot for clean UIs and
                   smooth user experiences. I also have a tiny obsession with
                   automating anything that looks repetitive. I love working on
-                  projects that solve problems and bring a smile to people's
+                  projects that solve problems and bring a smile to people&apos;s
                   faces.
                 </p>
               </div>
@@ -106,7 +107,7 @@ export default function AboutPage() {
                   I believe that technology should serve humanity, not the other
                   way around. Every line of code should have a purpose, every
                   design should tell a story, and every solution should make
-                  someone's life better. I'm committed to building with empathy,
+                  someone&apos;s life better. I&apos;m committed to building with empathy,
                   creativity, and a relentless focus on quality.
                 </p>
               </div>
@@ -149,7 +150,7 @@ export default function AboutPage() {
                     />
                   </div>
                   <p className="text-white text-xs sm:text-sm mr-13">
-                    Hello world I'm Arush.
+                    Hello world I&apos;m Arush.
                   </p>
                 </div>
               </div>

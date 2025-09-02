@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +10,9 @@ export default function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 flex items-center justify-between px-6 py-6 z-50">
       <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-10 text-sm tracking-wide uppercase font-exulta">
-        <a href="/" className="opacity-80 hover:opacity-100 transition-opacity">
+        <Link href="/" className="opacity-80 hover:opacity-100 transition-opacity">
           Home
-        </a>
+        </Link>
         <a
           href="/about"
           className="opacity-80 hover:opacity-100 transition-opacity"
@@ -45,13 +46,13 @@ export default function Nav() {
           isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
       >
-        <a
+        <Link
           href="/"
           onClick={() => setIsOpen(false)}
           className="opacity-80 hover:opacity-100 transition-opacity"
         >
           Home
-        </a>
+        </Link>
         <a
           href="/about"
           onClick={() => setIsOpen(false)}

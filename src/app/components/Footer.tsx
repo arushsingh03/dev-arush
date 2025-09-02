@@ -33,9 +33,9 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3">
             <li>
-              <a className="hover:text-white transition-colors" href="/">
+              <Link className="hover:text-white transition-colors" href="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <a className="hover:text-white transition-colors" href="/about">
