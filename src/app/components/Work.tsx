@@ -1,11 +1,7 @@
 "use client";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import { Timeline } from "./timeline";
-import plazit1 from "../../../public/projects/planzit1.png";
-import plazit2 from "../../../public/projects/planzit2.png";
-import plazit3 from "../../../public/projects/planzit3.png";
-import plazit4 from "../../../public/projects/planzit4.png";
 
 const Work = () => {
   const data = [
@@ -20,28 +16,28 @@ const Work = () => {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src={plazit1}
+              src="/projects/planzit1.png"
               alt="Productivity & Time Management Tool"
               width={500}
               height={300}
               className="rounded-xl object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src={plazit2}
+              src="/projects/planzit2.png"
               alt="AI Creative Tool"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src={plazit3}
+              src="/projects/planzit3.png"
               alt="Collaborative Productivity Tool"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src={plazit4}
+              src="/projects/planzit4.png"
               alt="Mobile application"
               width={500}
               height={300}
