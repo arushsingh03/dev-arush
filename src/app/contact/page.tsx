@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState, useRef } from "react";
 import {
   Mail,
   Phone,
@@ -12,7 +12,9 @@ import {
   Loader2,
   CheckCircle2,
   AlertCircle,
+  Pickaxe,
 } from "lucide-react";
+import Image from "next/image";
 import Nav from "../components/Nav";
 
 const CONTACT = {
@@ -30,25 +32,40 @@ export default function ContactPage() {
 
       <section className="relative overflow-hidden">
         <div className="relative px-6 sm:px-12 lg:px-24 py-20 lg:py-28 flex flex-col items-center justify-center text-center mx-auto">
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-semibold font-exulta tracking-wider"
-          >
-            Let&apos;s build something great.
-          </motion.h1>
+          <div className="text-center mb-12 relative">
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-4 tracking-tight leading-none relative z-10"
+            >
+              LET&apos;S BUILD
+            </motion.h1>
+
+            <div className="absolute top-[30px] right-[80px] translate-x-8 -translate-y-4 text-4xl md:text-6xl z-30">
+              <Pickaxe className="w-[50px] h-[50px] text-blue-300 select-none pointer-events-none" />
+            </div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-6xl md:text-8xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500 leading-none relative font-exulta z-30"
+            >
+              SOMETHING TOGETHER
+            </motion.h1>
+          </div>
+
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 max-w-2xl text-white/70 text-lg"
+            className="mt-4 max-w-2xl text-white/70 text-lg relative z-30"
           >
             Want to work together or have a question? Drop a message I'll get
             back fast.
           </motion.p>
         </div>
-
       </section>
 
       <section className="relative px-6 sm:px-12 lg:px-24 pb-24">
@@ -58,7 +75,7 @@ export default function ContactPage() {
               <Card>
                 <div className="flex items-start gap-4">
                   <div className="mt-1 rounded-xl border border-white/10 p-2">
-                    <Mail className="size-5" aria-hidden />
+                    <Mail className="size-5 text-blue-300" aria-hidden />
                   </div>
                   <div>
                     <p className="text-sm text-white/60">Email</p>
@@ -72,7 +89,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="mt-1 rounded-xl border border-white/10 p-2">
-                    <Phone className="size-5" aria-hidden />
+                    <Phone className="size-5 text-blue-300" aria-hidden />
                   </div>
                   <div>
                     <p className="text-sm text-white/60">Phone</p>
@@ -86,7 +103,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="mt-1 rounded-xl border border-white/10 p-2">
-                    <MapPin className="size-5" aria-hidden />
+                    <MapPin className="size-5 text-blue-300" aria-hidden />
                   </div>
                   <div>
                     <p className="text-sm text-white/60">Location</p>
@@ -99,10 +116,10 @@ export default function ContactPage() {
                 <p className="text-sm text-white/60">Elsewhere</p>
                 <div className="mt-3 flex items-center gap-3">
                   <Social href={CONTACT.github} label="GitHub">
-                    <Github className="size-5" />
+                    <Github className="size-5 text-blue-300" />
                   </Social>
                   <Social href={CONTACT.linkedin} label="LinkedIn">
-                    <Linkedin className="size-5" />
+                    <Linkedin className="size-5 text-blue-300" />
                   </Social>
                 </div>
               </Card>
@@ -113,7 +130,7 @@ export default function ContactPage() {
                   href={`mailto:${CONTACT.email}`}
                   className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm hover:bg-white hover:text-black transition"
                 >
-                  <Mail className="size-4" /> Compose
+                  <Mail className="size-4 text-blue-300" /> <span className="text-blue-300">Compose</span>
                 </a>
               </div>
             </div>
@@ -184,7 +201,7 @@ function ContactForm() {
       newErrors.message = "Please enter a message.";
 
     if (String(data.company || "")) {
-      setStatus("success"); 
+      setStatus("success");
       form.reset();
       return;
     }
@@ -290,7 +307,7 @@ function ContactForm() {
             name="subject"
             type="text"
             className={inputCls}
-            placeholder="Let’s collaborate"
+            placeholder="Let's collaborate"
           />
         </Field>
 
@@ -311,11 +328,11 @@ function ContactForm() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white text-black px-5 py-3 font-medium transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white text-black px-5 py-3 font-medium transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70"
           >
             {status === "loading" ? (
               <>
-                <Loader2 className="size-4 animate-spin" /> Sending
+                <Loader2 className="size-4 animate-spin " /> Sending
               </>
             ) : (
               <>

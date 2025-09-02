@@ -66,29 +66,29 @@ const Work = () => {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Task+Management"
-              alt="Task management system"
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80"
+              alt="Mobile app UI 1"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Weather+Analytics"
-              alt="Weather analytics dashboard"
+              src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=80"
+              alt="Mobile app UI 2"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=API+Dashboard"
-              alt="API management dashboard"
+              src="https://images.unsplash.com/photo-1603539947678-cd3954ed515d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Mobile app UI 3"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Social+Platform"
-              alt="Social media platform"
+              src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?q=80&w=880?auto=format&fit=crop&w=1200&q=80"
+              alt="Mobile app UI 4"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
@@ -124,28 +124,28 @@ const Work = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Portfolio+Site"
+              src="https://images.unsplash.com/photo-1746286721981-f4bb5be91cf5?q=80&w=1170?auto=format&fit=crop&w=1200&q=80"
               alt="Portfolio website"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Recipe+App"
+              src="https://images.unsplash.com/photo-1712002641387-be6d0b888a93?q=80&w=1170?auto=format&fit=crop&w=1200&q=80"
               alt="Recipe sharing app"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Chat+Platform"
+              src="https://images.unsplash.com/photo-1712002641157-02b4f7a030aa?q=80&w=1170?auto=format&fit=crop&w=1200&q=80"
               alt="Chat platform"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Learning+Platform"
+              src="https://images.unsplash.com/photo-1737641624486-7846df8528dc?q=80&w=687?auto=format&fit=crop&w=1200&q=80"
               alt="Learning management system"
               width={500}
               height={300}
@@ -182,28 +182,28 @@ const Work = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=First+React+App"
+              src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=1171?auto=format&fit=crop&w=1200&q=80"
               alt="First React application"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=CSS+Animations"
+              src="https://images.unsplash.com/photo-1661882217431-b64b303fb1d0?q=80&w=1332?auto=format&fit=crop&w=1200&q=80"
               alt="CSS animations project"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Todo+App"
+              src="https://plus.unsplash.com/premium_photo-1682144827510-bbe3cd636253?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Todo application"
               width={500}
               height={300}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="https://via.placeholder.com/500x300/1f2937/ffffff?text=Calculator+App"
+              src="https://plus.unsplash.com/premium_photo-1661593486413-d279b1a02e28?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Calculator application"
               width={500}
               height={300}

@@ -1,10 +1,10 @@
-import Spline from "@splinetool/react-spline/next";
 import Nav from "./components/Nav";
 import Work from "./components/Work";
 import About from "./components/About";
-import Contact from "./components/Contact";
-import Skills from "./components/Skills";
 import Stats from "./components/Stats";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Spline from "@splinetool/react-spline/next";
 
 export default function Home() {
   return (
@@ -62,7 +62,7 @@ export default function Home() {
 
         <section
           id="contact"
-          className="relative z-10 px-6 sm:px-12 lg:px-24 py-24"
+          className="relative z-10 px-6"
         >
           <Contact />
         </section>

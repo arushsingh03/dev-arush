@@ -1,7 +1,6 @@
-import { CircleArrowOutUpRight } from "lucide-react";
-import Link from "next/link";
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
+import { CircleArrowOutUpRight } from "lucide-react";
 
 const Contact = () => {
   return (
