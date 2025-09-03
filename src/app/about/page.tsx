@@ -24,11 +24,12 @@ export default function AboutPage() {
             <div className="flex justify-center lg:justify-end w-full lg:order-2">
               <div className="bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 w-48 h-56 sm:w-56 sm:h-64 md:w-72 md:h-80 lg:w-96 lg:h-104 xl:w-120 xl:h-130 flex items-center justify-center shadow-lg">
                 <Image
-                  src="/avatar.png"
+                  src="/arushavatar.png"
                   alt="Arush Avatar"
                   width={400}
                   height={400}
                   className="object-contain"
+                  unoptimized
                 />
               </div>
             </div>
