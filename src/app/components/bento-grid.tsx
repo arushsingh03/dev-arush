@@ -4,6 +4,11 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 import { Button } from "@/app/components/button";
 
+// Define proper types for the Icon component
+interface IconComponent {
+  className?: string;
+}
+
 const BentoGrid = ({
   children,
   className,
@@ -35,7 +40,7 @@ const BentoCard = ({
   name: string;
   className?: string;
   background: ReactNode;
-  Icon: any;
+  Icon: React.ComponentType<IconComponent>;
   description: string;
   href: string;
   cta: string;

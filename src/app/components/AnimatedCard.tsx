@@ -1,9 +1,9 @@
 "use client";
 
 import { animate, motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Star } from "lucide-react"; 
+import { Star } from "lucide-react";
 
 export interface AnimatedCardProps {
   className?: string;
@@ -21,7 +21,6 @@ const sizeMap = {
   md: "h-12 w-12",
   lg: "h-16 w-16",
 };
-
 
 const ClaudeLogo = ({ className }: { className?: string }) => {
   return (
@@ -215,15 +214,15 @@ function AnimatedIcons({ icons }: { icons: AnimatedCardProps["icons"] }) {
 
   useEffect(() => {
     sequence.forEach((step) => {
-      const [selector, keyframes, options] = step as [string, any, any];
+      const [selector, keyframes] = step;
       animate(selector, keyframes, {
-        ...options,
-        direction: "alternate",
+        duration: 0.8,
         repeat: Infinity,
         repeatDelay: 1,
+        repeatType: "reverse",
       });
     });
-  }, []);
+  }, [sequence]);
 
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
@@ -270,33 +269,67 @@ const AnimatedSparkles = () => (
   </div>
 );
 
+// Fixed Sparkles component - the source of the hydration mismatch
 const Sparkles = () => {
-  const randomMove = () => Math.random() * 2 - 1;
-  const randomOpacity = () => Math.random();
-  const random = () => Math.random();
+  const [sparkles, setSparkles] = useState<
+    Array<{
+      id: string;
+      top: number;
+      left: number;
+      duration: number;
+      delay: number;
+    }>
+  >([]);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+
+    const generateSparkles = () => {
+      return Array.from({ length: 12 }, (_, i) => ({
+        id: `sparkle-${i}`,
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        duration: Math.random() * 2 + 4,
+        delay: Math.random() * 2,
+      }));
+    };
+
+    setSparkles(generateSparkles());
+
+    const interval = setInterval(() => {
+      setSparkles(generateSparkles());
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Don't render sparkles during SSR or before mounting
+  if (!isMounted) {
+    return <div className="absolute inset-0" />;
+  }
 
   return (
     <div className="absolute inset-0">
-      {[...Array(12)].map((_, i) => (
+      {sparkles.map((sparkle) => (
         <motion.span
-          key={`star-${i}`}
+          key={sparkle.id}
           animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
-            opacity: randomOpacity(),
+            opacity: [0, 1, 0],
             scale: [1, 1.2, 0],
           }}
           transition={{
-            duration: random() * 2 + 4,
+            duration: sparkle.duration,
             repeat: Infinity,
             ease: "linear",
+            delay: sparkle.delay,
           }}
           style={{
             position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
-            width: `2px`,
-            height: `2px`,
+            top: `${sparkle.top}%`,
+            left: `${sparkle.left}%`,
+            width: "2px",
+            height: "2px",
             borderRadius: "50%",
             zIndex: 1,
           }}

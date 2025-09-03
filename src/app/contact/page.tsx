@@ -10,11 +10,11 @@ import {
   Github,
   Linkedin,
   Loader2,
-  CheckCircle2,
-  AlertCircle,
   Pickaxe,
 } from "lucide-react";
+import { toast } from "sonner";
 import Nav from "../components/Nav";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const CONTACT = {
   email: "arushsingh1803@gmail.com",
@@ -42,14 +42,14 @@ export default function ContactPage() {
             </motion.h1>
 
             <div className="absolute top-[30px] right-[80px] translate-x-8 -translate-y-4 text-4xl md:text-6xl z-30">
-              <Pickaxe className="w-[50px] h-[50px] text-blue-300 select-none pointer-events-none" />
+              <Pickaxe className="w-[50px] h-[50px] text-blue-400 select-none pointer-events-none" />
             </div>
 
             <motion.h1
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-6xl md:text-8xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500 leading-none relative font-exulta z-30"
+              className="text-6xl md:text-8xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400 leading-none relative font-exulta z-30"
             >
               SOMETHING TOGETHER
             </motion.h1>
@@ -61,8 +61,8 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 max-w-2xl text-white/70 text-lg relative z-30"
           >
-            Want to work together or have a question? Drop a message I&apos;ll get
-            back fast.
+            Want to work together or have a question? Drop a message I&apos;ll
+            get back fast.
           </motion.p>
         </div>
       </section>
@@ -73,13 +73,13 @@ export default function ContactPage() {
             <div className="sticky top-6 space-y-6">
               <Card>
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 rounded-xl border border-white/10 p-2">
-                    <Mail className="size-5 text-blue-300" aria-hidden />
+                  <div className="mt-1 rounded-xl border border-white/10 bg-blue-400/10 p-2">
+                    <Mail className="size-5 text-blue-400" aria-hidden />
                   </div>
                   <div>
                     <p className="text-sm text-white/60">Email</p>
                     <a
-                      className="mt-1 block text-lg hover:underline underline-offset-4"
+                      className="mt-1 block text-lg text-white hover:text-blue-400 hover:underline underline-offset-4 transition-colors"
                       href={`mailto:${CONTACT.email}`}
                     >
                       {CONTACT.email}
@@ -87,13 +87,13 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 rounded-xl border border-white/10 p-2">
-                    <Phone className="size-5 text-blue-300" aria-hidden />
+                  <div className="mt-1 rounded-xl border border-white/10 bg-blue-400/10 p-2">
+                    <Phone className="size-5 text-blue-400" aria-hidden />
                   </div>
                   <div>
                     <p className="text-sm text-white/60">Phone</p>
                     <a
-                      className="mt-1 block text-lg hover:underline underline-offset-4"
+                      className="mt-1 block text-lg text-white hover:text-blue-400 hover:underline underline-offset-4 transition-colors"
                       href={`tel:${CONTACT.phone}`}
                     >
                       {CONTACT.phone}
@@ -101,12 +101,14 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 rounded-xl border border-white/10 p-2">
-                    <MapPin className="size-5 text-blue-300" aria-hidden />
+                  <div className="mt-1 rounded-xl border border-white/10 bg-blue-400/10 p-2">
+                    <MapPin className="size-5 text-blue-400" aria-hidden />
                   </div>
                   <div>
                     <p className="text-sm text-white/60">Location</p>
-                    <p className="mt-1 text-lg">{CONTACT.location}</p>
+                    <p className="mt-1 text-lg text-white">
+                      {CONTACT.location}
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -115,10 +117,10 @@ export default function ContactPage() {
                 <p className="text-sm text-white/60">Elsewhere</p>
                 <div className="mt-3 flex items-center gap-3">
                   <Social href={CONTACT.github} label="GitHub">
-                    <Github className="size-5 text-blue-300" />
+                    <Github className="size-5" />
                   </Social>
                   <Social href={CONTACT.linkedin} label="LinkedIn">
-                    <Linkedin className="size-5 text-blue-300" />
+                    <Linkedin className="size-5" />
                   </Social>
                 </div>
               </Card>
@@ -127,9 +129,10 @@ export default function ContactPage() {
                 <p className="text-sm text-white/60">Prefer email?</p>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm hover:bg-white hover:text-black transition"
+                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-blue-400 hover:bg-blue-400 hover:text-black hover:border-blue-400 transition-all duration-200"
                 >
-                  <Mail className="size-4 text-blue-300" /> <span className="text-blue-300">Compose</span>
+                  <Mail className="size-4" />
+                  <span>Compose</span>
                 </a>
               </div>
             </div>
@@ -167,7 +170,7 @@ function Social({
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className="group inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white hover:text-black transition"
+      className="group inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-blue-400 hover:bg-blue-400 hover:text-black hover:border-blue-400 transition-all duration-200"
     >
       <span className="sr-only">{label}</span>
       {children}
@@ -200,6 +203,9 @@ function ContactForm() {
       newErrors.message = "Please enter a message.";
 
     if (String(data.company || "")) {
+      toast.success("Message sent successfully!", {
+        description: "Thanks for reaching out! I'll get back to you soon.",
+      });
       setStatus("success");
       form.reset();
       return;
@@ -208,6 +214,9 @@ function ContactForm() {
     if (Object.keys(newErrors).length) {
       setErrors(newErrors);
       setStatus("idle");
+      toast.error("Please fix the errors below", {
+        description: "Check the form fields and try again.",
+      });
       return;
     }
 
@@ -230,34 +239,45 @@ function ContactForm() {
 
       setStatus("success");
       formRef.current?.reset();
+
+      toast.success("Message sent successfully!", {
+        description: "Thanks for reaching out! I'll get back to you soon.",
+        duration: 5000,
+      });
     } catch (err) {
       console.error("Contact form error:", err);
       setStatus("error");
+
+      toast.error("Failed to send message", {
+        description:
+          "Something went wrong. Please try again or email me directly.",
+        duration: 5000,
+      });
     }
   }
 
   return (
     <Card>
-      <h2 className="text-2xl font-semibold">Send a message</h2>
+      <h2 className="text-2xl font-semibold text-white">Send a message</h2>
       <p className="mt-1 text-white/60">I typically reply within a day.</p>
 
-      {status === "success" && (
-        <div
-          role="status"
-          className="mt-4 flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-emerald-300"
+      {/* Show validation errors using shadcn Alert */}
+      {Object.keys(errors).length > 0 && (
+        <Alert
+          variant="destructive"
+          className="bg-red-900/20 border-red-500/50"
         >
-          <CheckCircle2 className="size-5" aria-hidden />
-          <p>Thanks! Your message was sent.</p>
-        </div>
-      )}
-      {status === "error" && (
-        <div
-          role="status"
-          className="mt-4 flex items-center gap-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-red-300"
-        >
-          <AlertCircle className="size-5" aria-hidden />
-          <p>Something went wrong. Please try again or email me directly.</p>
-        </div>
+          <AlertDescription className="text-red-200">
+            Please fix the following errors:
+            <ul className="mt-2 list-disc list-inside space-y-1">
+              {Object.entries(errors).map(([field, error]) => (
+                <li key={field} className="text-sm">
+                  {error}
+                </li>
+              ))}
+            </ul>
+          </AlertDescription>
+        </Alert>
       )}
 
       <form
@@ -327,11 +347,11 @@ function ContactForm() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white text-black px-5 py-3 font-medium transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-blue-400/30 bg-blue-400 text-black px-5 py-3 font-medium transition-all duration-200 hover:bg-blue-300 hover:border-blue-300 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:bg-blue-400"
           >
             {status === "loading" ? (
               <>
-                <Loader2 className="size-4 animate-spin " /> Sending
+                <Loader2 className="size-4 animate-spin" /> Sending
               </>
             ) : (
               <>
@@ -342,7 +362,7 @@ function ContactForm() {
 
           <a
             href={`mailto:${CONTACT.email}`}
-            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-medium text-white hover:bg-white/10 transition"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-medium text-white hover:bg-white/10 hover:border-white/25 transition-all duration-200"
           >
             Or email directly
           </a>
@@ -382,4 +402,4 @@ function Field({
 }
 
 const inputCls =
-  "w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white placeholder-white/40 outline-none ring-0 focus:border-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition";
+  "w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white placeholder-white/40 outline-none ring-0 focus:border-blue-400/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/20 transition-all duration-200";

@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import Nav from "@/app/components/Nav";
-import { CountingStats } from "@/app/components/Stats";
 import Contact from "@/app/components/Contact";
 import Spline from "@splinetool/react-spline/next";
+import { CountingStats } from "@/app/components/Stats";
 import {
   AnimatedCard,
   ClaudeLogo,
@@ -11,7 +12,6 @@ import {
   MetaIconOutline,
   OpenAILogo,
 } from "../components/AnimatedCard";
-import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -26,7 +26,9 @@ export default function AboutPage() {
                 <Image
                   src="/avatar.png"
                   alt="Arush Avatar"
-                  className="w-42 h-50 sm:w-50 sm:h-58 md:w-64 md:h-72 lg:w-88 lg:h-96 xl:w-120 xl:h-120 object-contain"
+                  width={400}
+                  height={400}
+                  className="sm:w-50 sm:h-58 md:w-64 md:h-72 lg:w-88 lg:h-96 xl:w-120 xl:h-120 object-contain"
                 />
               </div>
             </div>
@@ -77,11 +79,11 @@ export default function AboutPage() {
                   Who I am
                 </h3>
                 <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                  I&apos;m Arush, a full-stack developer who loves building things on
-                  the internet. I focus on creating digital experiences that are
-                  not only functional but also a joy to use. My passion lies in
-                  building web and mobile apps and experimenting with AI to make
-                  life easier and cooler.
+                  I&apos;m Arush, a full-stack developer who loves building
+                  things on the internet. I focus on creating digital
+                  experiences that are not only functional but also a joy to
+                  use. My passion lies in building web and mobile apps and
+                  experimenting with AI to make life easier and cooler.
                 </p>
               </div>
 
@@ -94,8 +96,8 @@ export default function AboutPage() {
                   design meets logic. I have a soft spot for clean UIs and
                   smooth user experiences. I also have a tiny obsession with
                   automating anything that looks repetitive. I love working on
-                  projects that solve problems and bring a smile to people&apos;s
-                  faces.
+                  projects that solve problems and bring a smile to
+                  people&apos;s faces.
                 </p>
               </div>
 
@@ -107,8 +109,8 @@ export default function AboutPage() {
                   I believe that technology should serve humanity, not the other
                   way around. Every line of code should have a purpose, every
                   design should tell a story, and every solution should make
-                  someone&apos;s life better. I&apos;m committed to building with empathy,
-                  creativity, and a relentless focus on quality.
+                  someone&apos;s life better. I&apos;m committed to building
+                  with empathy, creativity, and a relentless focus on quality.
                 </p>
               </div>
             </div>
