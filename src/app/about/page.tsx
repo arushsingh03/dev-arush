@@ -28,7 +28,7 @@ export default function AboutPage() {
                   alt="Arush Avatar"
                   width={400}
                   height={400}
-                  className="sm:w-50 sm:h-58 md:w-64 md:h-72 lg:w-88 lg:h-96 xl:w-120 xl:h-120 object-contain"
+                  className="object-contain"
                 />
               </div>
             </div>
