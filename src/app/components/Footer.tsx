@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { SiGithub, SiInstagram, SiLinkedin, SiX } from "react-icons/si";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { SiGithub, SiInstagram, SiLinkedin, SiX } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -19,7 +19,7 @@ export default function Footer() {
               <SiInstagram className="size-5 text-white hover:text-pink-400 transition-colors" />
             </Link>
             <Link href="https://x.com/arush_singh03">
-              <SiX className="size-5 text-white hover:text-blue-300 transition-colors" />
+              <SiX className="size-5 text-white hover:text-gray-500 transition-colors" />
             </Link>
           </div>
           <p>
@@ -81,8 +81,6 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin className="size-4 text-white/60 mt-0.5" />
               <address className="text-sm not-italic leading-relaxed">
-                House No 204,
-                <br />
                 Kanpur, Uttar Pradesh
                 <br />
                 India

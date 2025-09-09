@@ -41,8 +41,8 @@ export default function ContactPage() {
               LET&apos;S BUILD
             </motion.h1>
 
-            <div className="absolute top-[30px] right-[80px] translate-x-8 -translate-y-4 text-4xl md:text-6xl z-30">
-              <Pickaxe className="w-[50px] h-[50px] text-blue-400 select-none pointer-events-none" />
+            <div className="absolute top-[10px] right-[30px] sm:top-[20px] sm:right-[40px] md:top-[30px] md:right-[80px] translate-x-4 sm:translate-x-6 md:translate-x-8 -translate-y-2 sm:-translate-y-3 md:-translate-y-4 text-2xl sm:text-3xl md:text-4xl lg:text-6xl z-30">
+              <Pickaxe className="w-[40px] h-[30px] sm:w-[35px] sm:h-[35px] md:w-[45px] md:h-[45px] lg:w-[50px] lg:h-[50px] text-blue-400 select-none pointer-events-none" />
             </div>
 
             <motion.h1
